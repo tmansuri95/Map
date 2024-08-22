@@ -4,19 +4,19 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 const vesselIcon = new L.Icon({
-    iconUrl: '/src/assets/Frame_334.png',
+    iconUrl: '/Frame_334.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
 });
 
 const startPointIcon = new L.Icon({
-    iconUrl: '/src/assets/location_svgrepo.com (2).png',
+    iconUrl: '/location_svgrepo.com (2).png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
 });
 
 const endPointIcon = new L.Icon({
-    iconUrl: '/src/assets/location_svgrepo.com (1).png',
+    iconUrl: '/location_svgrepo.com (1).png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
 });
@@ -56,7 +56,7 @@ const Map = ({ startCoords, endCoords, speed, refreshRate }) => {
     }, [endCoords, speed, refreshRate]);
 
     return (
-        <MapContainer center={startCoords} zoom={10} style={{ height: '100vh', width: '202vh' }}>
+        <MapContainer center={startCoords} zoom={10} style={{ height: '100vh', width: '205vh' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
