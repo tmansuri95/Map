@@ -42,9 +42,8 @@ const Map = ({ startCoords, endCoords, speed, refreshRate }) => {
     };
 
     useEffect(() => {
-        const distancePerSecond = speed / 3600; // km per second
-        const distancePerFrame = distancePerSecond / refreshRate; // km per frame
-
+        const distancePerSecond = speed / 3600;
+        const distancePerFrame = distancePerSecond / refreshRate;
         const interval = setInterval(() => {
             setPosition((prevPosition) => {
                 const nextPosition = calculateNextPosition(prevPosition, endCoords, distancePerFrame);
